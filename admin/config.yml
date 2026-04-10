@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: 'fr'
+
+collections:
+
+  # ── Galerie de réalisations ──────────────────────────────
+  - name: "galerie"
+    label: "📸 Galerie de réalisations"
+    folder: "data/galerie"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Titre du projet", name: "titre", widget: "string", hint: "Ex: Pavé 3D — Villa résidentielle" }
+      - { label: "Quartier / Lieu", name: "lieu", widget: "string", hint: "Ex: Ouaga 2000, Karpala..." }
+      - { label: "Catégorie", name: "categorie", widget: "select",
+          options: ["Pavé 3D", "Parpaings", "Bordures & Caniveaux", "Briques de parement", "Rénovation extérieure", "Décoration extérieure"] }
+      - { label: "Photo", name: "photo", widget: "image" }
+      - { label: "Afficher dans la galerie ?", name: "actif", widget: "boolean", default: true }
+
+  # ── Témoignages clients ──────────────────────────────────
+  - name: "temoignages"
+    label: "💬 Témoignages clients"
+    folder: "data/temoignages"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nom du client", name: "nom", widget: "string", hint: "Ex: M. KABORÉ Issa" }
+      - { label: "Quartier & Projet", name: "info", widget: "string", hint: "Ex: Ouaga 2000 · Pavé 3D" }
+      - { label: "Témoignage", name: "texte", widget: "text" }
+      - { label: "Initiale (lettre avatar)", name: "initiale", widget: "string", hint: "1 seule lettre, ex: K" }
+      - { label: "Afficher ?", name: "actif", widget: "boolean", default: true }
+
+  # ── Produits ─────────────────────────────────────────────
+  - name: "produits"
+    label: "🧱 Produits"
+    folder: "data/produits"
+    create: false
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Nom du produit", name: "nom", widget: "string" }
+      - { label: "Description courte", name: "description_courte", widget: "text" }
+      - { label: "Description longue", name: "description_longue", widget: "text" }
+      - { label: "Photo principale", name: "photo", widget: "image", required: false }
+      - { label: "Produit phare ?", name: "phare", widget: "boolean", default: false }
+
+  # ── Informations de l'entreprise ─────────────────────────
+  - name: "parametres"
+    label: "⚙️ Informations entreprise"
+    files:
+      - label: "Infos générales"
+        name: "general"
+        file: "data/parametres.json"
+        fields:
+          - { label: "Téléphone", name: "telephone", widget: "string", default: "55 51 12 12" }
+          - { label: "WhatsApp (avec indicatif, sans +)", name: "whatsapp", widget: "string", default: "22655511212" }
+          - { label: "Localisation", name: "localisation", widget: "string", default: "Ouagadougou, Burkina Faso" }
+          - { label: "Lien Facebook", name: "facebook", widget: "string" }
+          - { label: "Années d'expérience", name: "annees", widget: "string", default: "4+" }
+          - { label: "Nombre de projets", name: "projets", widget: "string", default: "100+" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "La passion de l'excellence" }

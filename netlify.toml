@@ -1,0 +1,46 @@
+# =====================================================
+#  BATILAB TECHNOLOGY — Configuration Netlify
+#  Pour déployer : glissez le dossier sur netlify.com
+# =====================================================
+
+[build]
+  publish = "."
+
+# Redirections & headers de sécurité
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options         = "DENY"
+    X-XSS-Protection        = "1; mode=block"
+    X-Content-Type-Options  = "nosniff"
+    Referrer-Policy         = "strict-origin-when-cross-origin"
+    Permissions-Policy      = "camera=(), microphone=(), geolocation=()"
+
+# Cache long sur assets statiques
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Redirection www → domaine principal
+[[redirects]]
+  from   = "https://www.batilabtech.com/*"
+  to     = "https://batilabtech.com/:splat"
+  status = 301
+  force  = true
+
+# Page 404 personnalisée (facultatif : créer pages/404.html)
+# [[redirects]]
+#   from   = "/*"
+#   to     = "/pages/404.html"
+#   status = 404

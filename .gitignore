@@ -1,0 +1,13 @@
+# Fichiers système Windows
+Thumbs.db
+Desktop.ini
+
+# Fichiers système Mac
+.DS_Store
+
+# Fichiers temporaires
+*.tmp
+*.log
+
+# Ancien fichier HTML (remplacé par le projet structuré)
+batilab-website_1.html
