@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: batilabpaves-cell/batilab-website
   branch: main
 
 media_folder: "images"
