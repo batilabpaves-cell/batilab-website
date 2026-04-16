@@ -164,13 +164,14 @@ nav.nav-scrolled {
   display: flex; flex-direction: column; justify-content: center;
   padding: 8rem 4rem 5rem;
   position: relative; overflow: hidden;
+  background: url('../images/hero-bg.jpg') center/cover no-repeat;
 }
 .hero::before {
   content: ''; position: absolute; inset: 0;
   background:
+    linear-gradient(135deg, rgba(12,29,18,0.93) 0%, rgba(12,29,18,0.78) 50%, rgba(12,29,18,0.88) 100%),
     radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,162,39,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(42,122,72,0.10) 0%, transparent 70%),
-    radial-gradient(ellipse 30% 30% at 10% 20%, rgba(42,122,72,0.06) 0%, transparent 70%);
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(42,122,72,0.10) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-eyebrow {

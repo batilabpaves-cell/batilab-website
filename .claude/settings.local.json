@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\hp\\\\OneDrive\\\\Desktop\\\\site web code\" /b)",
+      "Bash(findstr -i \"logo\\\\|batilab\\\\|jpg\\\\|jpeg\\\\|png\")",
+      "WebFetch(domain:batilabtech.com)",
+      "Read(//c/Users/hp/OneDrive/Desktop/PHOTO BATILAB/**)",
+      "Read(//c/Users/hp/Desktop/**)",
+      "Read(//c/Users/hp/**)",
+      "Bash(cp 'C:/Users/hp/OneDrive/Desktop/PHOTO BATILAB/mp.jpg' 'C:/Users/hp/OneDrive/Desktop/site web code/images/hero-bg.jpg')",
+      "Bash(cp 'C:/Users/hp/OneDrive/Desktop/PHOTO BATILAB/DD.jpg' 'C:/Users/hp/OneDrive/Desktop/site web code/images/about-chantier.jpg')",
+      "Bash(cp 'C:/Users/hp/OneDrive/Desktop/PHOTO BATILAB/WhatsApp Image 2023-07-18 à 19.49.H1.jpg' 'C:/Users/hp/OneDrive/Desktop/site web code/images/galerie-pave-3d-rouge.jpg')",
+      "Bash(cp 'C:/Users/hp/OneDrive/Desktop/PHOTO BATILAB/WhatsApp Image 2023-12-18 à 18.24.27_7644d9e5.jpg' 'C:/Users/hp/OneDrive/Desktop/site web code/images/galerie-pave-chevron.jpg')",
+      "Bash(cp 'C:/Users/hp/OneDrive/Desktop/PHOTO BATILAB/WhatsApp Image 2024-03-04 à 17.36.19_92b5500e.jpg' 'C:/Users/hp/OneDrive/Desktop/site web code/images/galerie-pave-y.jpg')"
+    ]
+  }
+}
